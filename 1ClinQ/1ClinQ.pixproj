@@ -19,6 +19,26 @@
       <IsMain>false</IsMain>
       <Path>Paint.pix</Path>
     </ProjectFileItem>
+    <ProjectFileItem z:Id="i6">
+      <IsMain>false</IsMain>
+      <Path>Data\Акты_Исходные.xlsx</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i7">
+      <IsMain>false</IsMain>
+      <Path>Data\Пример_Результата_Акты.xlsx</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i8">
+      <IsMain>false</IsMain>
+      <Path>Data\Пример_Результата_Отчет.xlsx</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i9">
+      <IsMain>false</IsMain>
+      <Path>Data\Результат_Отчет.xlsx</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i10">
+      <IsMain>false</IsMain>
+      <Path>Data\Шаблон.xlsx</Path>
+    </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
   <Name>1ClinQ</Name>

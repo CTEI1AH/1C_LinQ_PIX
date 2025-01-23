@@ -53,7 +53,7 @@
           <PropertyValue z:Id="i9">
             <PropertyName>FileName</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>@"C:\Users\SBZalesky\Documents\1C_LinQ\Акты_Исходные.xlsx"</_expression>
+            <_expression>@"Data\Акты_Исходные.xlsx"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -107,7 +107,7 @@
           <PropertyValue z:Id="i15">
             <PropertyName>FileName</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>@"C:\Users\SBZalesky\Documents\1C_LinQ\Акты_Исходные.xlsx"</_expression>
+            <_expression>@"Data\Акты_Исходные.xlsx"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
