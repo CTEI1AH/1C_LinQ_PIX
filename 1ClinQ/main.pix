@@ -257,7 +257,7 @@ Id = row["ID"].ToString()
         </PropertyValues>
         <SelectedOptionId i:nil="true" />
         <AutoCloseMode>None</AutoCloseMode>
-        <EnableStatus>false</EnableStatus>
+        <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
         <Text>Закрасить документ</Text>
@@ -635,7 +635,7 @@ Id = row["ID"].ToString()
           <PropertyValue z:Id="i67">
             <PropertyName>FileName</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>@"C:\Users\SBZalesky\Documents\1C_LinQ\Результат_Отчет.xlsx"</_expression>
+            <_expression>@"Data\Результат_Отчет.xlsx"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
