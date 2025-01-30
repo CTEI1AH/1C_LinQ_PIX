@@ -25,19 +25,7 @@
     </ProjectFileItem>
     <ProjectFileItem z:Id="i7">
       <IsMain>false</IsMain>
-      <Path>Data\Пример_Результата_Акты.xlsx</Path>
-    </ProjectFileItem>
-    <ProjectFileItem z:Id="i8">
-      <IsMain>false</IsMain>
-      <Path>Data\Пример_Результата_Отчет.xlsx</Path>
-    </ProjectFileItem>
-    <ProjectFileItem z:Id="i9">
-      <IsMain>false</IsMain>
       <Path>Data\Результат_Отчет.xlsx</Path>
-    </ProjectFileItem>
-    <ProjectFileItem z:Id="i10">
-      <IsMain>false</IsMain>
-      <Path>Data\Шаблон.xlsx</Path>
     </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />

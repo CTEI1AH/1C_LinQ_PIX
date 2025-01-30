@@ -46,7 +46,7 @@
           <PropertyValue z:Id="i5">
             <PropertyName>BaseDataTable</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>out_dt_A</_expression>
+            <_expression>dt_A</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -101,7 +101,7 @@
           <PropertyValue z:Id="i8">
             <PropertyName>BaseDataTable</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>out_dt_B</_expression>
+            <_expression>dt_B</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -333,7 +333,7 @@
                 ida = Regex.Match(ida, str_regexp5).Groups[1].Value;           
                 return ida;
             })
-            .ToList();</_expression>
+            .ToList(); //применение регулярок чтобы вытянуть ID</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -352,7 +352,7 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text>list_ID_a</Text>
+        <Text>Список ID </Text>
         <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
       <AbstractStep z:Id="i32" i:type="ExecutedStep">
@@ -370,7 +370,7 @@
                 string datea = Regex.Match(value, str_regexp6).Value;          
                 return datea;
             })
-            .ToList();</_expression>
+            .ToList();////применение регулярок чтобы вытянуть Дату</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -389,7 +389,7 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text>list_Data_a</Text>
+        <Text>Список Дат</Text>
         <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
       <AbstractStep z:Id="i35" i:type="ExecutedStep">
@@ -404,7 +404,7 @@
                 <_dataType>Value</_dataType>
                 <_expression i:nil="true" />
                 <_screenShotBase64 i:nil="true" />
-                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:string">DataRow newRow = out_dt_A.NewRow();
+                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:string">DataRow newRow = dt_A.NewRow();
             newRow["ID"] = list_ID_a[i-1];
             newRow["Date"] = list_Data_a[i-1];
             newRow["Debet_1"] = in_dt_First.Rows[i-1]["Debet_1"];
@@ -412,7 +412,7 @@
             newRow["Debet_2"] = in_dt_First.Rows[i-1]["Debet_2"];
             newRow["Credit_2"] = in_dt_First.Rows[i-1]["Credit_2"];
             newRow["List"] = "First";
-            out_dt_A.Rows.Add(newRow);</_value>
+            dt_A.Rows.Add(newRow);</_value>
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
               </PropertyValue>
             </PropertyValues>
@@ -421,7 +421,7 @@
             <EnableStatus>true</EnableStatus>
             <ExceptionHandlingMode>Default</ExceptionHandlingMode>
             <RetryCount>-1</RetryCount>
-            <Text></Text>
+            <Text>Заполнение таблицы строками</Text>
             <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
           </AbstractStep>
         </Childs>
@@ -469,7 +469,7 @@
           <PropertyValue z:Id="i42">
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>out_dt_A.AsEnumerable().Select(row =&gt;
+            <_expression>dt_A.AsEnumerable().Select(row =&gt;
 {
     if (string.IsNullOrWhiteSpace(row["Debet_1"].ToString())) row["Debet_1"] = "0";
     if (string.IsNullOrWhiteSpace(row["Credit_1"].ToString())) row["Credit_1"] = "0";
@@ -525,7 +525,7 @@
                 ida = Regex.Match(ida, str_regexp5).Groups[1].Value;       
                 return ida;
             })
-            .ToList();</_expression>
+            .ToList(); //применение регулярок чтобы вытянуть ID</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -544,7 +544,7 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text>list_ID_b</Text>
+        <Text>Список ID</Text>
         <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
       <AbstractStep z:Id="i48" i:type="ExecutedStep">
@@ -559,7 +559,7 @@
                 <_dataType>Value</_dataType>
                 <_expression i:nil="true" />
                 <_screenShotBase64 i:nil="true" />
-                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:string">DataRow newRow = out_dt_B.NewRow();
+                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:string">DataRow newRow = dt_B.NewRow();
             newRow["ID"] = list_ID_b[i-1];
             newRow["Date"] = in_dt_Second.Rows[i-1]["Doc_date"];
             newRow["Debet_1"] = in_dt_Second.Rows[i-1]["Debet_1"];
@@ -567,7 +567,7 @@
             newRow["Debet_2"] = in_dt_Second.Rows[i-1]["Debet_2"];
             newRow["Credit_2"] = in_dt_Second.Rows[i-1]["Credit_2"];
             newRow["List"] = "Second";
-            out_dt_B.Rows.Add(newRow);</_value>
+            dt_B.Rows.Add(newRow);</_value>
                 <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
               </PropertyValue>
             </PropertyValues>
@@ -576,7 +576,7 @@
             <EnableStatus>true</EnableStatus>
             <ExceptionHandlingMode>Default</ExceptionHandlingMode>
             <RetryCount>-1</RetryCount>
-            <Text></Text>
+            <Text>Заполнение таблицы строками</Text>
             <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
           </AbstractStep>
         </Childs>
@@ -633,7 +633,7 @@
           <PropertyValue z:Id="i56">
             <PropertyName>SourceDataTable</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>out_dt_B</_expression>
+            <_expression>dt_B</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -649,7 +649,7 @@
           <PropertyValue z:Id="i58">
             <PropertyName>BaseDataTable</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>out_dt_A</_expression>
+            <_expression>dt_A</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
